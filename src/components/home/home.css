@@ -23,8 +23,8 @@
 .cradle {
     min-width: 400px;
     min-height: 40vh;
-    border-top: 4px solid aliceblue;
-    border-bottom: 10px solid aliceblue;
+    border-top: 4px solid rgb(200, 200, 200);
+    border-bottom: 10px solid rgb(200, 200, 200);
     display: flex;
     justify-content: center;
 }
@@ -32,9 +32,11 @@
 .ball {
     position: relative;
     width: 4px;
-    background-color: aliceblue;
+    background-color: rgb(200, 200, 200);
     margin: 0 38px;
     transform-origin: top;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 
 .ball::after {
@@ -45,9 +47,12 @@
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    background-color: aliceblue;
+    background: radial-gradient(circle at 20% 20%, white, black);
 }
 
+/* Note: All these keyframes are to mimic how a pendulum works in real life; slowing down as it gets to the top and speeding up as it goes 
+back down (eq: angle(time) = maxAngle*cos(angularMomentum * time) ) */
+/* Another Note: the "Counter" keyframes are to spin the ball in the opposite direction so that the lighting stays consistent */
 @keyframes leftBall {
     0%  { transform: rotate(0deg); }
     5%  { transform: rotate(14deg); }
@@ -62,8 +67,28 @@
     50%  { transform: rotate(0deg); }
     100%  { transform: rotate(0deg); }
 }
-.ball:first-child {
+.left-ball {
     animation-name: leftBall;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes leftCounter {
+    0%  { transform: rotate(0deg); }
+    5%  { transform: rotate(-14deg); }
+    10%  { transform: rotate(-26.45deg); }
+    15%  { transform: rotate(-36.4deg); }
+    20%  { transform: rotate(-42.8deg); }
+    25%  { transform: rotate(-45deg); }
+    30%  { transform: rotate(-42.8deg); }
+    35%  { transform: rotate(-36.4deg); }
+    40%  { transform: rotate(-26.45deg); }
+    45%  { transform: rotate(-14deg); }
+    50%  { transform: rotate(0deg); }
+    100%  { transform: rotate(0deg); }
+}
+.left-ball::after {
+    animation-name: leftCounter;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -83,10 +108,29 @@
     95%  { transform: rotate(-14deg); }
     100%  { transform: rotate(0deg); }
 }
-.ball:last-child {
+.right-ball {
     animation-name: rightBall;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
+@keyframes rightCounter {
+    0%  { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    55%  { transform: rotate(14deg); }
+    60%  { transform: rotate(26.45deg); }
+    65%  { transform: rotate(36.4deg); }
+    70%  { transform: rotate(42.8deg); }
+    75%  { transform: rotate(45deg); }
+    80%  { transform: rotate(42.8deg); }
+    85%  { transform: rotate(36.4deg); }
+    90%  { transform: rotate(26.45deg); }
+    95%  { transform: rotate(14deg); }
+    100%  { transform: rotate(0deg); }
+}
+.right-ball::after {
+    animation-name: rightCounter;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
