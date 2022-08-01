@@ -1,10 +1,11 @@
+// Importing node modules
 import React from 'react'
 
-const ticker = () => {
+const Ticker = () => {
     
   return (
-    <div>ticker</div>
+    <div>Ticker</div>
   )
-}
+};
 
-export default ticker
+export default Ticker;

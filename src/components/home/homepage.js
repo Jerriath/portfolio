@@ -1,10 +1,17 @@
+// Importing node modules
 import React from 'react'
 
-const homepage = () => {
+// Importing local project files
+import Cradle from './Cradle';
+import Ticker from './Ticker';
+
+const Homepage = () => {
     
   return (
-    <div>homepage</div>
+    <div className='homepage'>
+        <Cradle />
+    </div>
   )
-}
+};
 
-export default homepage
+export default Homepage;

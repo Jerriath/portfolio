@@ -1,10 +1,20 @@
+// Importing node modules
 import React from 'react'
 
-const cradle = () => {
+// Importing local project files
+import './home.css';
+
+const Cradle = () => {
     
   return (
-    <div>cradle</div>
+    <div className='cradle'>
+        <div className='ball'></div>
+        <div className='ball'></div>
+        <div className='ball'></div>
+        <div className='ball'></div>
+        <div className='ball'></div>
+    </div>
   )
-}
+};
 
-export default cradle
+export default Cradle;
