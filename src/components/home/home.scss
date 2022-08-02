@@ -8,15 +8,104 @@
 
 
 /* ---------- Homepage styles ---------- */
+@use 'sass:list';
 .homepage {
     min-height: 100vh;
     min-width: 100vw;
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: radial-gradient(ellipse at top, #080e21 0%,  #1b2735 95%);
+}
+
+.ticker-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 2rem;
+    color: mistyrose;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+// This block is for creating the meteor shower background for homepage
+$meteors: 15; // Number of meteors in total
+$stars: 300; // Number of stars in total
+$shadows: (); // Variable for holding all the stars that will be created; stars are created by adding multiple box-shadows to one element
+
+@for $i from 1 through $stars { // Loops for creating random positions for each of the stars; specific for 1920:1080 aspect ratio for now 
+    $x: random(1920);
+    $y: random(1080);
+    $shadows: $shadows, ( $x+px $y+px white) !global;
+}
+
+.star {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@for $i from 1 through $meteors { 
+    $v: random(90) + 9; // left value; in percentage units
+    $h: random(250) + 50; // top value; in pixel units
+    $d: random(70)/10 + 3; // animation duration value so each meteor flies at different speeds; min of 3s, max of 10s
+    .meteor-#{$i} {
+      position: absolute;
+      top: $h + px;
+      left: $v*1%;
+      width: 300px; // These dimensions represent the tail of the meteor
+      height: 1px;
+      transform: rotate(-45deg); // So the meteors don't fly sideways
+      background-image: linear-gradient(to right, #fff, rgba(255,255,255,0));
+      animation: meteor $d+s linear  infinite;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 4px; 
+        height: 5px;
+        border-radius: 50%;
+        margin-top: -2px;
+        background: rgba(#fff,.7);
+        box-shadow: 0 0 15px 3px #fff;
+      }
+      
+    }
+  }
+  
+  @keyframes meteor { // Each meteor flies for 12% of the animation and then reset back to their starting position
+    0% {
+      opacity: 1;
+      margin-top: -300px;
+      margin-right: -300px;
+    }
+    12% {
+      opacity: 0;
+    }
+    15% {
+      margin-top: 300px;
+      margin-left: -600px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 
 /* ---------- Cradle styles ---------- */
@@ -24,7 +113,6 @@
     min-width: 400px;
     min-height: 40vh;
     border-top: 4px solid rgb(200, 200, 200);
-    border-bottom: 10px solid rgb(200, 200, 200);
     display: flex;
     justify-content: center;
 }
@@ -133,4 +221,62 @@ back down (eq: angle(time) = maxAngle*cos(angularMomentum * time) ) */
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+
+/* ---------- Ticker styles ---------- */
+$interests: 6;
+
+.ticker {
+    position: relative;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    height: 3rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+@keyframes tick {
+    0% {
+        opacity: 0;
+        top:  -2rem;
+    }
+    2% {
+        opacity: 1;
+        top: 0.75rem;
+    }
+    17% {
+        opacity: 1;
+        top: 0.75rem;
+    }
+    19% {
+        opacity: 0;
+        top: 4rem;
+    }
+    100% {
+        opacity: 0;
+        top: -2rem;
+    }
+}
+.interest {
+    opacity: 0;
+    position: absolute;
+    font-size: 1.5rem;
+    color: white;
+    animation-name: tick;
+    animation-timing-function: linear;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+$colors: mistyrose, aliceblue, aqua, lightsalmon, snow, honeydew;
+
+@for $i from 1 through $interests {
+    $delay: (($i - 1) * 3)+s;
+    $color: list.nth($colors, $i);
+    .interest-#{$i} {
+        animation-delay: $delay;
+        color: $color;
+    }
 }

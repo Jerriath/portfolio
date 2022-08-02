@@ -6,9 +6,9 @@ import Homepage from './components/home/Homepage';
 
 const App = () => {
   return (
-    <div className='app'>
+    <main className='app'>
         <Homepage />
-    </div>
+    </main>
   )
 }
 
