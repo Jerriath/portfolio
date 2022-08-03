@@ -3,13 +3,16 @@ import React from 'react'
 
 // Importing local project files
 import Homepage from './components/home/Homepage';
+import Header from './components/header/Header';
 
 const App = () => {
-  return (
-    <div className='app'>
-        <Homepage />
-    </div>
-  )
+    
+    return (
+        <main className='app'>
+            <Header />
+            <Homepage />
+        </main>
+    )
 }
 
 export default App

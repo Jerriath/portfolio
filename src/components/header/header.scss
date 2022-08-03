@@ -1,0 +1,68 @@
+$accent-color: rgb(0, 200, 200);
+$main-color: rgb(220, 220, 220);
+$sub-color: rgb(169, 169, 169);
+
+header {
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 85%;
+    position: fixed;
+    left: 7.5%;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button {
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    color: white;
+    height: 2rem;
+}
+
+li {
+    margin: 0 1rem;
+    padding: 0 0.5rem;
+    transition: color 0.2s linear;
+}
+
+li:hover {
+    color: $accent-color;
+
+}
+
+a {
+    cursor: pointer;
+}
+
+// Temporary Styles; this needs to be added with js logic
+li:first-child {
+    color: $accent-color;
+    border-left: 2px solid $accent-color;
+    border-right: 2px solid $accent-color;
+}
+
+button {
+    background: transparent;
+    border: 2px solid $accent-color;
+    border-radius: 3px;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    color: $accent-color;
+    font-size: 1rem;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 200, 200, 0.3);
+}
