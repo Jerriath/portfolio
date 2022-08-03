@@ -6,12 +6,13 @@ import Homepage from './components/home/Homepage';
 import Header from './components/header/Header';
 
 const App = () => {
-  return (
-    <main className='app'>
-        <Header />
-        <Homepage />
-    </main>
-  )
+    
+    return (
+        <main className='app'>
+            <Header />
+            <Homepage />
+        </main>
+    )
 }
 
 export default App

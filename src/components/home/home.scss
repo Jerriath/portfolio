@@ -95,12 +95,28 @@ footer {
 }
 
 footer h3:first-child {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
+@keyframes bobbing {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 0.5rem;
+    }
+    100% {
+        top: 0;
+    }
+}
 footer h3:last-child {
     margin-bottom: 1rem;
     display: flex;
+    animation-name: bobbing;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    position: relative;
 }
 
 footer h3 div {
