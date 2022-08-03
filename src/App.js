@@ -1,6 +1,6 @@
 // Importing node modules
 import React from 'react'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // Importing local project files
 import Homepage from './components/home/Homepage';
@@ -9,21 +9,35 @@ import About from './components/about/About';
 
 const App = () => {
 
+    const [scrollHeight, setScrollHeight] = useState(0);
+    const [scrolledUp, setScrolledUp] = useState(true);
+
     useEffect(() => {
         const handleScroll = event => {
-          console.log('window.scrollY', window.scrollY);
+            if (window.scrollY < 100) {
+                setScrolledUp(true);
+            }
+            else if (window.scrollY - scrollHeight < 0) {
+                console.log("Up");
+                setScrolledUp(true);
+            }
+            else if (window.scrollY - scrollHeight > 0) {
+                console.log("down");
+                setScrolledUp(false);
+            } 
+            setScrollHeight(window.scrollY);
         };
     
         window.addEventListener('scroll', handleScroll);
     
         return () => {
-          window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
-      }, []);
+      }, [scrollHeight]);
 
     return (
         <main className='app'>
-            <Header />
+            <Header scrolledUp={scrolledUp}/>
             <Homepage />
             <About />
         </main>

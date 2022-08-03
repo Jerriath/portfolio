@@ -4,10 +4,10 @@ import React from 'react'
 // Importing local project files
 import './header.scss';
 
-const Header = () => {
+const Header = ({scrolledUp}) => {
 
     return (
-        <header>
+        <header className={scrolledUp ? 'show' : 'hide'}>
             <nav>
                 <ul>
                     <li>
