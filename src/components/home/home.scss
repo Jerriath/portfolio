@@ -20,7 +20,7 @@ $sub-color: rgb(169, 169, 169);
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background: radial-gradient(ellipse at top, #080e21 0%,  #1b2735 95%);
+    background: radial-gradient(ellipse at top, #1b2735 0%, #080e21  70%);
 }
 
 .main-content {
@@ -125,7 +125,7 @@ $stars: 300; // Number of stars in total
 $shadows: (); // Variable for holding all the stars that will be created; stars are created by adding multiple box-shadows to one element
 
 @for $i from 1 through $stars { // Loops for creating random positions for each of the stars; specific for 1920:1080 aspect ratio for now 
-    $x: random(1920);
+    $x: random(4000);
     $y: random(1080);
     $shadows: $shadows, ( $x+px $y+px white) !global;
 }
