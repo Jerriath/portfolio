@@ -40,7 +40,7 @@ $sub-color: rgb(169, 169, 169);
     font-size: 1.2rem;
     letter-spacing: 2px;
     color: $accent-color;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .introduction h2 {
@@ -52,13 +52,14 @@ $sub-color: rgb(169, 169, 169);
 .introduction h3 {
     font-size: 3rem;
     color: $sub-color;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .description {
     font-size: 1rem !important;
     color: $sub-color !important;
-    line-height: 1.1rem;
+    line-height: 1.75rem;
+    padding-right: 4rem;
 }
 
 .main-content {

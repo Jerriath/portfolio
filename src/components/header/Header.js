@@ -21,7 +21,7 @@ const Header = ({scrolledUp, scrollHeight}) => {
     }
 
     return (
-        <header className={scrolledUp ? 'show' : 'hide'}>
+        <header className={scrolledUp ? 'show navigation' : 'hide navigation'}>
             <nav>
                 <ul>
                     <li>

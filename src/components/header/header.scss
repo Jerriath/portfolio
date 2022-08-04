@@ -2,7 +2,7 @@ $accent-color: rgb(0, 200, 200);
 $main-color: rgb(220, 220, 220);
 $sub-color: rgb(169, 169, 169);
 
-header {
+.navigation {
     border-radius: 1.5rem;
     height: 3rem;
     width: 85%;
@@ -17,12 +17,12 @@ header {
     transition: top 0.2s linear;
 }
 
-button {
+.navigation button {
     margin-left: 1rem;
     margin-right: 2rem;
 }
 
-ul {
+.navigation ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -31,12 +31,12 @@ ul {
     height: 2rem;
 }
 
-li {
+.navigation li {
     margin: 0 1rem;
     transition: color 0.2s linear;
 }
 
-li:hover {
+.navigation li:hover {
     color: $accent-color;
 
 }
@@ -47,7 +47,7 @@ li:hover {
     border-right: 2px solid $accent-color;
 }
 
-a {
+.navigation a {
     cursor: pointer;
     padding: 0 0.5rem;
 }

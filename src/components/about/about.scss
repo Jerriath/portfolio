@@ -1,5 +1,107 @@
+$accent-color: rgb(0, 200, 200);
+$main-color: rgb(220, 220, 220);
+$sub-color: rgb(169, 169, 169);
+
 .about {
     height: 100vh;
     width: 100vw;
     background: #080e21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about div {
+    width: 66%;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 60%;
+    width: 60%;
+}
+
+.about-header {
+    color: $accent-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.about-header::after {
+    content: '';
+    width: 50vw;
+    border-bottom: 2px solid $accent-color;
+    height: 2px;
+    position: absolute;
+    right: -52vw;
+    top: 1rem;  
+}
+
+.content p {
+    color: $sub-color;
+    font-size: 1rem;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+.content a {
+    color: $accent-color;
+    text-decoration: none;
+    position: relative;
+}
+
+.content a:hover::after {
+    width: 90%;
+}
+
+.content a::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: $accent-color;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    transition: width 0.2s linear;
+}
+
+.tech-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.tech-item {
+    margin: 0.5rem 0;
+    color: $sub-color; 
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.tech-item::before {
+    content: '→';
+    position: absolute;
+    left: -1rem;
+    color: $accent-color;
+}
+
+.pictures {
+    min-width: 40%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pictures p {
+    color: white;
 }

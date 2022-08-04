@@ -15,6 +15,9 @@ const Homepage = ({scrollHeight}) => {
         if (scrollHeight > 50) {
             setShowFooter(false);
         }
+        else {
+            setShowFooter(true);
+        }
     }, [scrollHeight])
     
     return (
