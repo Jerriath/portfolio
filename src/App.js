@@ -37,8 +37,8 @@ const App = () => {
 
     return (
         <main className='app'>
-            <Header scrolledUp={scrolledUp}/>
-            <Homepage />
+            <Header scrolledUp={scrolledUp} scrollHeight={scrollHeight}/>
+            <Homepage scrollHeight={scrollHeight} />
             <About />
         </main>
     )

@@ -33,7 +33,6 @@ ul {
 
 li {
     margin: 0 1rem;
-    padding: 0 0.5rem;
     transition: color 0.2s linear;
 }
 
@@ -42,15 +41,15 @@ li:hover {
 
 }
 
-a {
-    cursor: pointer;
-}
-
-// Temporary Styles; this needs to be added with js logic
-li:first-child {
+.selected {
     color: $accent-color;
     border-left: 2px solid $accent-color;
     border-right: 2px solid $accent-color;
+}
+
+a {
+    cursor: pointer;
+    padding: 0 0.5rem;
 }
 
 button {
