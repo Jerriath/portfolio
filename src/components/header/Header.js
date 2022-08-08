@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react'
 
 // Importing local project files
 import './header.scss';
+import resume from './resume.pdf';
 
 const Header = ({scrolledUp, scrollHeight}) => {
 
@@ -47,7 +48,7 @@ const Header = ({scrolledUp, scrollHeight}) => {
                 </ul>
             </nav>
             <button>
-                <a>
+                <a className='resume' target='_blank' href={resume} rel='noreferrer'>
                     Resume
                 </a>
             </button>

@@ -1,6 +1,6 @@
 // Importing node modules
 import React from 'react'
-import Kahu from './kahu.jpg';
+import kahu from './kahu.jpg';
 
 //Importing local project files
 import './about.scss';
@@ -35,7 +35,7 @@ const About = () => {
                 </article>
                 <article className='pictures'>
                     <div className='picture-holder'>
-                        <img alt='image of myself' src={Kahu} />
+                        <img alt='image of myself' src={kahu} />
                         <div className='top-curtain curtain' ></div>
                         <div className='bot-curtain curtain' ></div>
                         <div className='left-curtain curtain' ></div>
