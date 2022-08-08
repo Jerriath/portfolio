@@ -1,5 +1,6 @@
 // Importing node modules
 import React from 'react'
+import Kahu from './kahu.jpg';
 
 //Importing local project files
 import './about.scss';
@@ -8,7 +9,7 @@ const About = () => {
 
     return (
         <section className='about'>
-            <div>
+            <div className='about-spacing'>
                 <article className='content'>
                     <h3 className='about-header'>
                         About Me
@@ -20,7 +21,7 @@ const About = () => {
                     <p>
                         After graduating, I wanted to change my career path and decided on software engineering. I spent a year after graduating teaching
                         myself web development via an online curriculum called 
-                        <a href='https://www.theodinproject.com/' target='_blank'>The Odin Project.</a>
+                        <a href='https://www.theodinproject.com/' target='_blank'> The Odin Project.</a>
                     </p>
                     <p>Here are some technologies I am confident working with: </p>
                     <ul className='tech-list' >
@@ -33,7 +34,13 @@ const About = () => {
                     </ul>
                 </article>
                 <article className='pictures'>
-                    <p>hello</p>
+                    <div className='picture-holder'>
+                        <img alt='image of myself' src={Kahu} />
+                        <div className='top-curtain curtain' ></div>
+                        <div className='bot-curtain curtain' ></div>
+                        <div className='left-curtain curtain' ></div>
+                        <div className='right-curtain curtain' ></div>
+                    </div>
                 </article>                
             </div>
         </section>

@@ -8,7 +8,7 @@ $sub-color: rgb(169, 169, 169);
     width: 85%;
     position: fixed;
     left: 7.5%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(rgba(169, 169, 169, 0.05), rgba(0, 0, 0, 0.5));
     top: 1rem;
     display: flex;
     justify-content: flex-end;
@@ -38,18 +38,19 @@ $sub-color: rgb(169, 169, 169);
 
 .navigation li:hover {
     color: $accent-color;
-
 }
 
 .selected {
     color: $accent-color;
-    border-left: 2px solid $accent-color;
-    border-right: 2px solid $accent-color;
+    border-left: 2px solid $accent-color !important;
+    border-right: 2px solid $accent-color !important;
 }
 
 .navigation a {
     cursor: pointer;
     padding: 0 0.5rem;
+    border-left: 2px solid rgba(0, 0, 0, 0);
+    border-right: 2px solid rgba(0, 0, 0, 0);
 }
 
 button {

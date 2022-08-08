@@ -11,20 +11,20 @@ $sub-color: rgb(169, 169, 169);
     align-items: center;
 }
 
-.about div {
+.about-spacing {
     width: 66%;
     display: flex;
     justify-content: center;
 }
 
 .content {
-    margin-right: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    min-width: 60%;
-    width: 60%;
+    min-width: calc(60% - 3rem);
+    width: calc(60% - 3rem);
+    padding-right: 3rem;
 }
 
 .about-header {
@@ -36,11 +36,11 @@ $sub-color: rgb(169, 169, 169);
 
 .about-header::after {
     content: '';
-    width: 50vw;
+    width: 48vw;
     border-bottom: 2px solid $accent-color;
     height: 2px;
     position: absolute;
-    right: -52vw;
+    right: -51vw;
     top: 1rem;  
 }
 
@@ -98,10 +98,200 @@ $sub-color: rgb(169, 169, 169);
     min-width: 40%;
     width: 40%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.pictures p {
-    color: white;
+.picture-holder {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.pictures img {
+    margin: 1rem;
+    width: calc(100% - 2rem);   
+}
+
+.curtain {
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    margin: 1rem;
+    background-color: rgba(0, 200, 200, 0.2);
+}
+
+@keyframes topSquish {
+    0% {
+        height: calc(100% - 2rem);
+        top: 0;
+    }
+    75% {
+        height: 2px;
+        background-color: $accent-color;
+        top: 0;
+    }
+    100% {
+        height: 2px;
+        background-color: $accent-color;
+        top: -2rem;
+    }
+}
+
+@keyframes topGrow {
+    0% {
+        height: 2px;
+        background-color: $accent-color;
+        top: -2rem;
+    }
+    25% {
+        height: 2px;
+        background-color: $accent-color;
+        top: 0;
+    }
+    100% {
+        height: calc(100% - 2rem);
+        top: 0;
+    }
+}
+
+.top-curtain {
+    animation: topGrow 0.35s linear forwards;
+    top: 0;
+}
+
+.picture-holder:hover .top-curtain {
+    animation: topSquish 0.35s linear forwards;
+}
+
+@keyframes botSquish {
+    0% {
+        height: calc(100% - 2rem);
+        
+    }
+    75% {
+        height: 2px;
+        background-color: $accent-color;
+        
+    }
+    100% {
+        height: 2px;
+        background-color: $accent-color;
+        bottom: -2rem;
+    }
+}
+
+@keyframes bottomGrow {
+    0% {
+        height: 2px;
+        background-color: $accent-color;
+        bottom: -2rem;
+    }
+    25% {
+        height: 2px;
+        background-color: $accent-color;
+        
+    }
+    100% {
+        height: calc(100% - 2rem);
+        
+    }
+}
+
+.bot-curtain {
+    animation: bottomGrow 0.35s linear forwards;
+    bottom: 0;
+}
+
+.picture-holder:hover .bot-curtain {
+    animation: botSquish 0.35s linear forwards;
+}
+
+@keyframes leftSquish {
+    0% {
+        width: calc(100% - 2rem);
+        left: 0;
+    }
+    75% {
+        width: 2px;
+        background-color: $accent-color;
+        left: 0;
+    }
+    100% {
+        width: 2px;
+        background-color: $accent-color;
+        left: -2rem;
+    }
+}
+
+@keyframes leftGrow {
+    0% {
+        width: 2px;
+        background-color: $accent-color;
+        left: -2rem;
+    }
+    25% {
+        width: 2px;
+        background-color: $accent-color;
+        left: 0;
+    }
+    100% {
+        width: calc(100% - 2rem);
+        left: 0;
+    }
+}
+
+.left-curtain {
+    animation: leftGrow 0.35s linear forwards;
+    left: 0;
+    top: 0;
+}
+
+.picture-holder:hover .left-curtain {
+    animation: leftSquish 0.35s linear forwards;
+}
+
+@keyframes rightSquish {
+    0% {
+        width: calc(100% - 2rem);
+        right: 0;
+    }
+    75% {
+        width: 2px;
+        background-color: $accent-color;
+        right: 0;
+    }
+    100% {
+        width: 2px;
+        background-color: $accent-color;
+        right: -2rem;
+    }
+}
+
+@keyframes rightGrow {
+    0% {
+        width: 2px;
+        background-color: $accent-color;
+        right: -2rem;
+    }
+    25% {
+        width: 2px;
+        background-color: $accent-color;
+        right: 0;
+    }
+    100% {
+        width: calc(100% - 2rem);
+        right: 0;
+    }
+}
+
+.right-curtain {
+    animation: rightGrow 0.35s linear forwards;
+    right: 0;
+    top: 0;
+}
+
+.picture-holder:hover .right-curtain {
+    animation: rightSquish 0.35s linear forwards;
 }
