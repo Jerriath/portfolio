@@ -1,12 +1,24 @@
 // Importing node modules
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Importing local project files
 import Cradle from './Cradle';
 import Ticker from './Ticker';
 import './home.scss';
 
-const Homepage = () => {
+const Homepage = ({scrollHeight}) => {
+
+    const [showFooter, setShowFooter] = useState(true);
+
+    useEffect(() => {
+        console.log(scrollHeight);
+        if (scrollHeight > 50) {
+            setShowFooter(false);
+        }
+        else {
+            setShowFooter(true);
+        }
+    }, [scrollHeight])
     
     return (
         <section className='homepage'>
@@ -49,7 +61,7 @@ const Homepage = () => {
                     </div>
                 </article>
             </div>
-            <footer>
+            <footer style={showFooter ? { opacity: 1 } : { opacity: 0 }}>
                 <h3>Scroll down to read about me</h3>
                 <h3 className='arrow'>
                     <div></div>

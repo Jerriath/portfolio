@@ -2,26 +2,27 @@ $accent-color: rgb(0, 200, 200);
 $main-color: rgb(220, 220, 220);
 $sub-color: rgb(169, 169, 169);
 
-header {
+.navigation {
     border-radius: 1.5rem;
     height: 3rem;
     width: 85%;
     position: fixed;
     left: 7.5%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(rgba(169, 169, 169, 0.05), rgba(0, 0, 0, 0.5));
     top: 1rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     z-index: 999;
+    transition: top 0.2s linear;
 }
 
-button {
+.navigation button {
     margin-left: 1rem;
     margin-right: 2rem;
 }
 
-ul {
+.navigation ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -30,26 +31,26 @@ ul {
     height: 2rem;
 }
 
-li {
+.navigation li {
     margin: 0 1rem;
-    padding: 0 0.5rem;
     transition: color 0.2s linear;
 }
 
-li:hover {
+.navigation li:hover {
     color: $accent-color;
-
 }
 
-a {
+.selected {
+    color: $accent-color;
+    border-left: 2px solid $accent-color !important;
+    border-right: 2px solid $accent-color !important;
+}
+
+.navigation a {
     cursor: pointer;
-}
-
-// Temporary Styles; this needs to be added with js logic
-li:first-child {
-    color: $accent-color;
-    border-left: 2px solid $accent-color;
-    border-right: 2px solid $accent-color;
+    padding: 0 0.5rem;
+    border-left: 2px solid rgba(0, 0, 0, 0);
+    border-right: 2px solid rgba(0, 0, 0, 0);
 }
 
 button {
@@ -66,4 +67,17 @@ button {
 
 button:hover {
     background-color: rgba(0, 200, 200, 0.3);
+}
+
+.resume {
+    color: $accent-color;
+    text-decoration: none;
+}
+
+.show {
+    top: 1rem;
+}
+
+.hide {
+    top: -4rem;
 }
