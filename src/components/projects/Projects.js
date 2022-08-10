@@ -3,10 +3,13 @@ import React from 'react'
 
 // Importing local project files
 import './projects.scss';
+import Preview from './Preview';
 
 const Projects = () => {
     return (
-        <div>Projects</div>
+        <section>
+            
+        </section>
     )
 }
 

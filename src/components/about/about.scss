@@ -28,7 +28,7 @@ $sub-color: rgb(169, 169, 169);
 }
 
 .about-header {
-    color: $accent-color;
+    color: $main-color;
     font-size: 2rem;
     margin-bottom: 2rem;
     position: relative;
@@ -36,11 +36,11 @@ $sub-color: rgb(169, 169, 169);
 
 .about-header::after {
     content: '';
-    width: 48vw;
-    border-bottom: 2px solid $accent-color;
+    width: 25vw;
+    border-bottom: 1px solid $accent-color;
     height: 2px;
     position: absolute;
-    right: -51vw;
+    right: -26vw;
     top: 1rem;  
 }
 
@@ -51,24 +51,25 @@ $sub-color: rgb(169, 169, 169);
     line-height: 1.5rem;
 }
 
-.content a {
+.hover-link {
     color: $accent-color;
     text-decoration: none;
     position: relative;
+    display: inline-block;
 }
 
-.content a:hover::after {
-    width: 90%;
+.hover-link:hover::after {
+    width: 100%;
 }
 
-.content a::after {
+.hover-link::after {
     content: '';
     width: 0;
     height: 1px;
     background-color: $accent-color;
     position: absolute;
     bottom: 0;
-    left: 5%;
+    left: 0%;
     transition: width 0.2s linear;
 }
 
@@ -104,9 +105,10 @@ $sub-color: rgb(169, 169, 169);
 }
 
 .picture-holder {
-    width: 100%;
+    width: 85%;
     height: auto;
     position: relative;
+    
 }
 
 .picture-holder {
@@ -120,7 +122,7 @@ $sub-color: rgb(169, 169, 169);
 
 .pictures img {
     margin: 1rem;
-    width: calc(100% - 2rem);   
+    width: calc(100% - 2rem);
 }
 
 .curtain {

@@ -20,8 +20,8 @@ const About = () => {
                     </p>
                     <p>
                         After graduating, I wanted to change my career path and decided on software engineering. I spent a year after graduating teaching
-                        myself web development via an online curriculum called 
-                        <a href='https://www.theodinproject.com/' target='_blank'> The Odin Project.</a>
+                        myself web development via an online curriculum called &nbsp;
+                        <a className='hover-link' href='https://www.theodinproject.com/' target='_blank'>The Odin Project.</a>
                     </p>
                     <p>Here are some technologies I am confident working with: </p>
                     <ul className='tech-list' >
