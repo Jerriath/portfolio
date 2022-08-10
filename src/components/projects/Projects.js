@@ -7,8 +7,15 @@ import Preview from './Preview';
 
 const Projects = () => {
     return (
-        <section>
-            
+        <section className='projects'>
+            <div className='projects-spacing'>
+                <h3>
+                    Projects
+                </h3>
+                <div className='preview-holder'>
+
+                </div>
+            </div>
         </section>
     )
 }
