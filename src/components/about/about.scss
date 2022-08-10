@@ -111,7 +111,11 @@ $sub-color: rgb(169, 169, 169);
 
 .picture-holder {
     border: 2px dotted $accent-color;
-    border-radius: 10px;
+    transition: border-color 0.35s linear;
+}
+
+.picture-holder:hover {
+    border-color: transparent;
 }
 
 .pictures img {
@@ -196,7 +200,7 @@ $sub-color: rgb(169, 169, 169);
     25% {
         height: 2px;
         background-color: $accent-color;
-        
+        bottom: 0;
     }
     100% {
         height: calc(100% - 2rem);

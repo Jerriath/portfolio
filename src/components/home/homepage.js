@@ -47,10 +47,9 @@ const Homepage = ({scrollHeight}) => {
                         <h2>Jerry Zhang</h2>
                         <h3>Aspiring Software Engineer</h3>
                         <p className='description'>
-                        I am a self-taught, full-stack software engineer. I had graduated from the University of Florida with
-                        a Bachelor of Science degree in physics. 
+                        I am a self-taught, full-stack software engineer with a Bachelor of Science in physics from the 
+                        University of Florida.
                         </p>
-                        
                     </div>
                 </article>
                 <article className='right-content'>
