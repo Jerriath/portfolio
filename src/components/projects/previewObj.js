@@ -5,20 +5,32 @@ import twitterPreview from './images/twitterPreview.png';
 
 const previewObj = {
     blog: {
+        title: "Personal Blog",
         imgSrc: blogPreview,
-
+        description: '',
+        repo: 'https://github.com/Jerriath/blog-api',
+        demo: 'https://blog-client-jerriath.vercel.app/'
     },
     visualizer: {
+        title: "Sorting Visualizer",
         imgSrc: visualizerPreview,
-
+        description: '',
+        repo: 'https://github.com/Jerriath/sorting-visualizer',
+        demo: 'https://sorting-visualizer-five-rho.vercel.app/'
     },
     twitter: {
+        title: "Twitter Clone",
         imgSrc: twitterPreview,
-
+        description: '',
+        repo: 'https://github.com/Jerriath/twitter-clone',
+        demo: 'https://jerriath.github.io/twitter-clone/'
     },
     builder: {
+        title: "PC-Builder",
         imgSrc: builderPreview,
-        
+        description: '',
+        repo: 'https://github.com/Jerriath/pc-builder',
+        demo: 'https://hidden-savannah-47457.herokuapp.com/catalog'
     }
 };
 
