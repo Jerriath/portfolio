@@ -4,11 +4,11 @@ import React from 'react'
 // Importing local project files
 import './projects.scss';
 
-const Preview = () => {
+const Preview = ({image, }) => {
     return (
         <article className='preview'>
             <div className='preview-image'>
-                <img src={null} alt='Project preview' />
+                <img src={image} alt='Project preview' />
             </div>
             <div className='preview-overlay'> {/*This is gonna be the corner tab; on hover, will expand and turn from transparent to a color*/}
                 <div className='preview-column'> {/*This will hold the text content and anchors; on hover, will change z-index and color after delay */}

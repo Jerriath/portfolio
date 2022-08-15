@@ -13,6 +13,7 @@ $sub-color: rgb(169, 169, 169);
 
 .about-spacing {
     width: 66%;
+    min-width: 800px;
     display: flex;
     justify-content: center;
 }
@@ -30,15 +31,27 @@ $sub-color: rgb(169, 169, 169);
 .about-header {
     color: $main-color;
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
     position: relative;
+    font-weight: 600;
+}
+
+.about-header::before {
+    content: '';
+    width: 3rem;
+    border-bottom: 1px solid $accent-color;
+    height: 1px;
+    position: absolute;
+    left: -4rem;
+    top: 1rem;  
 }
 
 .about-header::after {
     content: '';
     width: 25vw;
     border-bottom: 1px solid $accent-color;
-    height: 2px;
+    height: 1px;
     position: absolute;
     right: -26vw;
     top: 1rem;  

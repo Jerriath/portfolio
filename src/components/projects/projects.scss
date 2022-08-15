@@ -4,15 +4,72 @@
     2. Preview.js styles
 
    ---------- Table of Contents ---------- */
+$accent-color: rgb(0, 200, 200);
+$main-color: rgb(220, 220, 220);
+$sub-color: rgb(169, 169, 169);
 
 
 /* ---------- Projects styles ---------- */
 .projects {
+    padding: 5rem 0;
+    min-width: 100vw;
+    background: #080e21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.projects-spacing {
+    min-width: 66%;
+    max-width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-header {
+    color: $main-color;
+    width: 100%;
+    text-align: right;
+}
+
+.projects-header h3 {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-right: 4rem;
+}
+
+.projects-header h3::before {
+    content: '';
+    width: 25vw;
+    border-bottom: 1px solid $accent-color;
+    height: 1px;
+    position: absolute;
+    left: -26vw;
+    top: 1rem;  
+}
+
+.projects-header h3::after {
+    content: '';
+    width: 3rem;
+    border-bottom: 1px solid $accent-color;
+    height: 1px;
+    position: absolute;
+    right: -4rem;
+    top: 1rem;  
+}
+
+.preview-holder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 
 /* ---------- Preview styles ---------- */
 .preview {
-    
+    margin: 1rem;
+
 }
