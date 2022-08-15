@@ -7,7 +7,7 @@ const previewObj = {
     blog: {
         title: "Personal Blog",
         imgSrc: blogPreview,
-        description: '',
+        description: 'Full stack MERN application for sharing cool things. Uses a backend, Express api to perform CRUD operations on a MongoDB database. There are two associated frontend applications; one for general users and one for admins.',
         repo: 'https://github.com/Jerriath/blog-api',
         demo: 'https://blog-client-jerriath.vercel.app/'
     },

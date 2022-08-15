@@ -126,12 +126,16 @@ $sub-color: rgb(169, 169, 169);
 .overlay-content {
     opacity: 0;
     height: 100%;
+    position: absolute;
+    left: -9999;
 }
 
 .preview:hover .overlay-content {
     opacity: 1;
     transition: opacity 0.35s linear;
     transition-delay: 0.35s;
+    position: inherit;
+    left: 0;
 }
 
 .preview-column {
@@ -158,12 +162,13 @@ $sub-color: rgb(169, 169, 169);
     height: 75%;
     width: 60%;
     border-right: 1px solid $accent-color;
-    padding-right: 2rem;
+    padding-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     color: $sub-color;
+    text-align: right;
 }
 
 .preview-anchors {
