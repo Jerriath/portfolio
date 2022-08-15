@@ -1,0 +1,17 @@
+$accent-color: rgb(0, 200, 200);
+
+button {
+    background: transparent;
+    border: 2px solid $accent-color;
+    border-radius: 3px;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    color: $accent-color;
+    font-size: 1rem;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 200, 200, 0.3);
+}

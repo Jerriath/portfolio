@@ -1,0 +1,191 @@
+/* ---------- Table of Contents ---------- 
+
+    1. Projects.js styles
+    2. Preview.js styles
+
+   ---------- Table of Contents ---------- */
+$accent-color: rgb(0, 200, 200);
+$main-color: rgb(220, 220, 220);
+$sub-color: rgb(169, 169, 169);
+
+
+/* ---------- Projects styles ---------- */
+.projects {
+    padding: 5rem 0;
+    min-width: 100vw;
+    background: #080e21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-spacing {
+    min-width: 66%;
+    max-width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-header {
+    color: $main-color;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.projects-header h3 {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-right: 4rem;
+}
+
+.projects-header h3::before {
+    content: '';
+    width: 25vw;
+    border-bottom: 1px solid $accent-color;
+    height: 1px;
+    position: absolute;
+    left: -26vw;
+    top: 1rem;  
+}
+
+.projects-header h3::after {
+    content: '';
+    width: 3rem;
+    border-bottom: 1px solid $accent-color;
+    height: 1px;
+    position: absolute;
+    right: -4rem;
+    top: 1rem;  
+}
+
+.preview-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1000px) {
+    .preview-holder {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+
+/* ---------- Preview styles ---------- */
+.preview {
+    margin: 1rem;
+    position: relative;
+
+}
+
+.preview-image {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    transition: all 0.35s linear;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    position: relative;
+}
+
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 1px solid $accent-color;
+    border-left: 1px solid $accent-color;
+    transition: all 0.35s linear;
+    z-index: 99;
+}
+
+.preview:hover .preview-image {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.preview:hover .preview-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 50, 50, 0.95);
+    border-bottom: 1px solid $accent-color;
+    border-right: 1px solid $accent-color;
+}
+
+.overlay-content {
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    left: -9999;
+}
+
+.preview:hover .overlay-content {
+    opacity: 1;
+    transition: opacity 0.35s linear;
+    transition-delay: 0.35s;
+    position: inherit;
+    left: 0;
+}
+
+.preview-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.preview-title {
+    font-size: 1.3rem;
+    color: $main-color;
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid $accent-color;
+}
+
+.preview-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.preview-text {
+    height: 75%;
+    width: 60%;
+    border-right: 1px solid $accent-color;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: $sub-color;
+    text-align: right;
+}
+
+.preview-anchors {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    // The buttons are styled from app.css
+}
+
+.preview-anchors a {
+    color: $accent-color;
+    text-decoration: none;
+}
+
+.preview-anchors button {
+    margin: 1rem;
+}
