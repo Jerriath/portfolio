@@ -71,5 +71,77 @@ $sub-color: rgb(169, 169, 169);
 /* ---------- Preview styles ---------- */
 .preview {
     margin: 1rem;
+    position: relative;
+
+}
+
+.preview-image {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    transition: all 0.35s linear;
+}
+
+.preview-image img {
+    width: 100%;
+    overflow: none;
+    position: relative;
+}
+
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 1px solid $accent-color;
+    border-left: 1px solid $accent-color;
+    transition: all 0.35s linear;
+    z-index: 99;
+}
+
+.preview:hover .preview-image {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.preview:hover .preview-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 50, 50, 0.95);
+    border-bottom: 1px solid $accent-color;
+    border-right: 1px solid $accent-color;
+}
+
+.preview:hover .overlay-content {
+    opacity: 1;
+    transition: opacity 0.35s linear;
+    transition-delay: 0.35s;
+}
+
+.overlay-content {
+    opacity: 0;
+}
+
+preview-column {
+
+}
+
+.preview-title {
+
+}
+
+.preview-row {
+
+}
+
+.preview-anchors {
+
+}
+
+// The buttons are styled from app.css
+
+.preview-text {
 
 }

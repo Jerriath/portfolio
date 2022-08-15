@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 
 // Importing local project files
+import './App.scss';
 import Homepage from './components/home/Homepage';
 import Header from './components/header/Header';
 import About from './components/about/About';
