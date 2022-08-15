@@ -14,21 +14,21 @@ const previewObj = {
     visualizer: {
         title: "Sorting Visualizer",
         imgSrc: visualizerPreview,
-        description: '',
+        description: 'React web application for visualizing how sorting algorithms work. Runs animations to show what elements are being compared and sorted against. Includes bubble, insertion, selection, merge, and quick sort.',
         repo: 'https://github.com/Jerriath/sorting-visualizer',
         demo: 'https://sorting-visualizer-five-rho.vercel.app/'
     },
     twitter: {
         title: "Twitter Clone",
         imgSrc: twitterPreview,
-        description: '',
+        description: 'Web application to essentially clone Twitter. Application was created with React for the frontend. Leverages Google Firestore as a BaaS for storing documents and and images. ',
         repo: 'https://github.com/Jerriath/twitter-clone',
         demo: 'https://jerriath.github.io/twitter-clone/'
     },
     builder: {
         title: "PC-Builder",
         imgSrc: builderPreview,
-        description: '',
+        description: 'Web server application created in Nodejs with Express. Helps to plan out pc parts to buy for building a custom PC. Different routes server different pages which are rendered using pug as the view engine.',
         repo: 'https://github.com/Jerriath/pc-builder',
         demo: 'https://hidden-savannah-47457.herokuapp.com/catalog'
     }
