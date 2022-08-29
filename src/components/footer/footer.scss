@@ -1,0 +1,113 @@
+$accent-color: rgb(0, 200, 200);
+$main-color: rgb(220, 220, 220);
+$sub-color: rgb(169, 169, 169);
+
+.footer {
+    background-color: #080e21;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.footer::before {
+    content: '';
+    width: 15rem;
+    border-top: 1px solid $accent-color;
+}
+
+.footer-links {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-links button:first-child {
+    margin-right: 5rem;
+    position: relative;
+}
+
+.footer-links button:first-child::before {
+    content: '';
+    width: 15rem;
+    position: absolute;
+    left: -16rem;
+    border-top: 1px solid $accent-color;
+    top: 50%;
+    bottom: 50%;
+}
+
+.footer-links button:first-child::after {
+    content: '';
+    width: 3rem;
+    position: absolute;
+    right: calc(-4rem - 2px); /* The 2px are from the width of the button */
+    border-top: 1px solid $accent-color;
+    top: 50%;
+    bottom: 50%;
+}
+
+.footer-links button:last-child {
+    position: relative;
+}
+
+.footer-links button:last-child::after {
+    content: '';
+    width: 15rem;
+    position: absolute;
+    right: -16rem;
+    border-top: 1px solid $accent-color;
+    top: 50%;
+    bottom: 50%;
+}
+
+.footer-links button a {
+    text-decoration: none;
+    color: $accent-color;
+}
+
+.email-link {
+    color: $accent-color;
+    position: relative;
+    cursor: pointer;
+}
+
+.email-link a {
+    color: $accent-color;
+    text-decoration: none;
+}
+
+.email-link a:hover::after {
+    width: 100%;
+}
+
+.email-link a::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: $accent-color;
+    position: absolute;
+    bottom: -0.1rem;
+    left: 0%;
+    transition: width 0.2s linear;
+}
+
+.email-link::before {
+    content: '';
+    width: 5rem;
+    position: absolute;
+    left: -6rem;
+    border-top: 1px solid $accent-color;
+    top: 50%;
+    bottom: 50%;
+}
+
+.email-link::after {
+    content: '';
+    width: 5rem;
+    position: absolute;
+    right: -6rem;
+    border-top: 1px solid $accent-color;
+    top: 50%;
+    bottom: 50%;
+}

@@ -85,7 +85,7 @@ $sub-color: rgb(169, 169, 169);
     color: $main-color;
 }
 
-footer {
+.homepage footer {
     position: absolute;
     bottom: 0.5rem;
     color: $main-color;
@@ -96,7 +96,7 @@ footer {
     transition: opacity 0.2s linear;
 }
 
-footer h3:first-child {
+.homepage footer h3:first-child {
     margin-bottom: 1.5rem;
 }
 
@@ -111,7 +111,7 @@ footer h3:first-child {
         top: 0;
     }
 }
-footer h3:last-child {
+.homepage footer h3:last-child {
     margin-bottom: 1rem;
     display: flex;
     animation-name: bobbing;
@@ -121,18 +121,18 @@ footer h3:last-child {
     position: relative;
 }
 
-footer h3 div {
+.homepage footer h3 div {
     border-top: 3px solid $accent-color;
     width: 1.5rem;
     padding: 0.1rem;
 }
 
-footer h3 div:first-child {
+.homepage footer h3 div:first-child {
     transform-origin: right;
     transform: rotate(30deg);
 }
 
-footer h3 div:last-child {
+.homepage footer h3 div:last-child {
     transform-origin: left;
     transform: rotate(-30deg);
 }

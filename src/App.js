@@ -8,6 +8,7 @@ import Homepage from './components/home/Homepage';
 import Header from './components/header/Header';
 import About from './components/about/About';
 import Projects from './components/projects/Projects';
+import Footer from './components/footer/Footer';
 
 const App = () => {
 
@@ -43,6 +44,7 @@ const App = () => {
             <Homepage scrollHeight={scrollHeight} />
             <About />
             <Projects />
+            <Footer />
         </main>
     )
 }
